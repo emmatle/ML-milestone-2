@@ -7,6 +7,13 @@ from src.data import load_data
 from src.methods.deep_network import MLP, CNN, Trainer
 from src.utils import normalize_fn, append_bias_term, accuracy_fn, macrof1_fn, get_n_classes
 
+'''
+############## COMMENTARY SECTION ###############################################################################################
+Ali: Coucou, il faudra regarder si on a le temps de faire run le truc pour savoir le run time de nos algorithms :)
+
+#################################################################################################################################
+'''
+
 
 def main(args):
     """
@@ -18,7 +25,7 @@ def main(args):
                           of this file). Their value can be accessed as "args.argument".
     """
     ## 1. First, we load our data and flatten the images into vectors
-    xtrain, xtest, ytrain, y_test = load_data()
+    xtrain, xtest, ytrain, ytest = load_data()
     xtrain = xtrain.reshape(xtrain.shape[0], -1)
     xtest = xtest.reshape(xtest.shape[0], -1)
 
@@ -27,8 +34,18 @@ def main(args):
 
     # Make a validation set
     if not args.test:
-    ### WRITE YOUR CODE HERE
+    ### WRITE YOUR CODE HERE 
+    # Create a validation set: we will use 15% of the data as validation. As we will split the data using the first and last
+    # segments of the set, we will first shuffle it to avoid bias impacting validation.
 
+        n_train = len(xtrain)
+
+        indices = np.random.permutation(n_train)  # Get shuffled indices
+        xtrain, ytrain = xtrain[indices], ytrain[indices]  # Apply the same shuffle to both arrays
+
+        n_val = int(np.floor(0.15 * n_train))  # Number of validation samples
+        xtest, ytest = xtrain[-n_val:], ytrain[-n_val:]  # Last 15% of the training set as validation
+        xtrain, ytrain = xtrain[:-n_val], ytrain[:-n_val]  # Keep the first 85% as training 
 
     ### WRITE YOUR CODE HERE to do any other data processing
 
@@ -41,7 +58,7 @@ def main(args):
     # Note: you might need to reshape the data depending on the network you use!
     n_classes = get_n_classes(ytrain)
     if args.nn_type == "mlp":
-        model = ... ### WRITE YOUR CODE HERE
+        model = MLP(n_classes)  #### code here, just that? not sure, maybe more args idk
 
     summary(model)
 
@@ -65,8 +82,8 @@ def main(args):
 
     ## As there are no test dataset labels, check your model accuracy on validation dataset.
     # You can check your model performance on test set by submitting your test set predictions on the AIcrowd competition.
-    acc = accuracy_fn(preds, xtest)
-    macrof1 = macrof1_fn(preds, xtest)
+    acc = accuracy_fn(preds, ytest)
+    macrof1 = macrof1_fn(preds, ytest)
     print(f"Validation set:  accuracy = {acc:.3f}% - F1-score = {macrof1:.6f}")
 
 

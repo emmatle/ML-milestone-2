@@ -13,7 +13,7 @@ class MLP(nn.Module):
     It should not use any convolutional layers.
     """
 
-    def __init__(self, input_size, n_classes):
+    def __init__(self, input_size, n_classes, hidden_layer=1):
         """
         Initialize the network.
 
@@ -25,11 +25,11 @@ class MLP(nn.Module):
             n_classes (int): number of classes to predict
         """
         super().__init__()
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
+
+        self.fc1 = nn.Linear(input_size, hidden_layer)
+        self.fc2 = nn.Linear(hidden_layer, hidden_layer)
+        self.fc3 = nn.Linear(hidden_layer, n_classes)
+
 
     def forward(self, x):
         """
@@ -41,11 +41,12 @@ class MLP(nn.Module):
             preds (tensor): logits of predictions of shape (N, C)
                 Reminder: logits are value pre-softmax.
         """
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
+        x = x.flatten(-3)
+
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        preds = self.fc3(x)
+
         return preds
 
 
