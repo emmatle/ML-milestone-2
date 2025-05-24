@@ -5,6 +5,7 @@ from torchinfo import summary
 
 from src.data import load_data
 from src.methods.deep_network import MLP, CNN, Trainer
+from src.methods.dummy_methods import DummyClassifier
 from src.utils import normalize_fn, append_bias_term, accuracy_fn, macrof1_fn, get_n_classes
 
 '''
@@ -34,10 +35,8 @@ def main(args):
 
     # Make a validation set
     if not args.test:
-    ### WRITE YOUR CODE HERE 
     # Create a validation set: we will use 15% of the data as validation. As we will split the data using the first and last
     # segments of the set, we will first shuffle it to avoid bias impacting validation.
-
         n_train = len(xtrain)
 
         indices = np.random.permutation(n_train)  # Get shuffled indices
@@ -46,9 +45,7 @@ def main(args):
         n_val = int(np.floor(0.15 * n_train))  # Number of validation samples
         xtest, ytest = xtrain[-n_val:], ytrain[-n_val:]  # Last 15% of the training set as validation
         xtrain, ytrain = xtrain[:-n_val], ytrain[:-n_val]  # Keep the first 85% as training 
-
-    ### WRITE YOUR CODE HERE to do any other data processing
-
+        pass
 
     ## 3. Initialize the method you want to use.
 
@@ -57,22 +54,32 @@ def main(args):
     # Prepare the model (and data) for Pytorch
     # Note: you might need to reshape the data depending on the network you use!
     n_classes = get_n_classes(ytrain)
-    if args.nn_type == "mlp":
-        model = MLP(n_classes)  #### code here, just that? not sure, maybe more args idk
+    input_size = 0 # Todo
 
-    summary(model)
+    # 3. Initialize the method you want to use
+    n_classes = get_n_classes(ytrain)
+    input_size = xtrain.shape[1]
 
-    # Trainer object
-    method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
+    if args.nn_type == "dummy":
+        model = DummyClassifier(arg1=1, arg2=2)
+        preds_train = model.fit(xtrain, ytrain)
+        preds = model.predict(xtest)
 
+    elif args.nn_type == "mlp":
+        model = MLP(input_size, n_classes)
+        summary(model)
+        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
+        preds_train = method_obj.fit(xtrain, ytrain)
+        preds = method_obj.predict(xtest)
 
-    ## 4. Train and evaluate the method
+    elif args.nn_type == "cnn":
+        model = MLP(input_size, n_classes)
+        summary(model)
+        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
+        preds_train = method_obj.fit(xtrain, ytrain)
+        preds = method_obj.predict(xtest)
 
-    # Fit (:=train) the method on the training data
-    preds_train = method_obj.fit(xtrain, ytrain)
-
-    # Predict on unseen data
-    preds = method_obj.predict(xtest)
+    # 4. Evaluate
 
     ## Report results: performance on train and valid/test sets
     acc = accuracy_fn(preds_train, ytrain)
