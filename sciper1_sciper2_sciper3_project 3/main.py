@@ -56,6 +56,7 @@ def main(args):
     n_classes = get_n_classes(ytrain)
     input_size = 0 # Todo
 
+    print(xtrain.shape)
     # 3. Initialize the method you want to use
     n_classes = get_n_classes(ytrain)
     input_size = xtrain.shape[1]
@@ -112,7 +113,7 @@ if __name__ == '__main__':
                         help="Device to use for the training, it can be 'cpu' | 'cuda' | 'mps'")
 
 
-    parser.add_argument('--lr', type=float, default=1e-5, help="learning rate for methods with learning rate")
+    parser.add_argument('--lr', type=float, default=1e-3, help="learning rate for methods with learning rate")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")

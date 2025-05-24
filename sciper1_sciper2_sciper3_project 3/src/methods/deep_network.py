@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import TensorDataset, DataLoader
+from src.utils import accuracy_fn
 
 ## MS2
 
@@ -41,7 +42,7 @@ class MLP(nn.Module):
             preds (tensor): logits of predictions of shape (N, C)
                 Reminder: logits are value pre-softmax.
         """
-        x = x.flatten(-3)
+        #x = x.flatten(-3)
 
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
@@ -116,7 +117,7 @@ class Trainer(object):
         self.batch_size = batch_size
 
         self.criterion = nn.CrossEntropyLoss()
-        self.optimizer = ...  ### WRITE YOUR CODE HERE
+        self.optimizer =  torch.optim.SGD(model.parameters(), lr=lr)  ### WRITE YOUR CODE HERE
 
     def train_all(self, dataloader):
         """
@@ -129,7 +130,7 @@ class Trainer(object):
             dataloader (DataLoader): dataloader for training data
         """
         for ep in range(self.epochs):
-            self.train_one_epoch(dataloader)
+            self.train_one_epoch(dataloader, ep)
 
             ### WRITE YOUR CODE HERE if you want to do add something else at each epoch
 
@@ -143,11 +144,30 @@ class Trainer(object):
         Arguments:
             dataloader (DataLoader): dataloader for training data
         """
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
+        # Training.
+        self.model.train()
+        for it, batch in enumerate(dataloader):
+            # 5.1 Load a batch, break it down in images and targets.
+            x, y = batch
+
+            # 5.2 Run forward pass --> Sequentially call the layers in order
+            logits = self.model(x)
+            
+            # 5.3 Compute loss (using 'criterion').
+            loss = self.criterion(logits, y)
+            
+            # 5.4 Run backward pass --> Compute gradient of the loss directions.
+            loss.backward()
+            
+            # 5.5 Update the weights using 'optimizer'.
+            self.optimizer.step()
+            
+            # 5.6 Zero-out the accumulated gradients.
+            self.optimizer.zero_grad()
+
+            print('\r[Epoch {}/{}] Batch {}/{} - Loss: {:.4f}'.format(
+            ep + 1, self.epochs, it + 1, len(dataloader), loss.item(),
+            end=''))
 
     def predict_torch(self, dataloader):
         """
@@ -166,11 +186,19 @@ class Trainer(object):
             pred_labels (torch.tensor): predicted labels of shape (N,),
                 with N the number of data points in the validation/test data.
         """
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
+                # Validation.
+        self.model.eval()
+        all_preds = []
+
+        with torch.no_grad():
+            for batch in dataloader:
+                x = batch[0]  # we don't need labels during prediction
+                logits = self.model(x)
+                preds = logits.argmax(dim=1)  # shape: (batch_size,)
+                all_preds.append(preds)
+
+        # Concatenate all batches
+        pred_labels = torch.cat(all_preds, dim=0)  # shape: (N,)
         return pred_labels
 
     def fit(self, training_data, training_labels):
