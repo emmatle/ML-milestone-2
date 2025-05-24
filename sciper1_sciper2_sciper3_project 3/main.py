@@ -56,7 +56,6 @@ def main(args):
     n_classes = get_n_classes(ytrain)
     input_size = 0 # Todo
 
-    print(xtrain.shape)
     # 3. Initialize the method you want to use
     n_classes = get_n_classes(ytrain)
     input_size = xtrain.shape[1]
@@ -67,7 +66,7 @@ def main(args):
         preds = model.predict(xtest)
 
     elif args.nn_type == "mlp":
-        model = MLP(input_size, n_classes)
+        model = MLP(input_size, n_classes, hidden_layers=args.hidden_layers)
         summary(model)
         method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
         preds_train = method_obj.fit(xtrain, ytrain)
@@ -112,7 +111,7 @@ if __name__ == '__main__':
     parser.add_argument('--device', type=str, default="cpu",
                         help="Device to use for the training, it can be 'cpu' | 'cuda' | 'mps'")
 
-
+    parser.add_argument('--hidden_layers', type=int, nargs='+', default=[256,128,64])
     parser.add_argument('--lr', type=float, default=1e-3, help="learning rate for methods with learning rate")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
     parser.add_argument('--test', action="store_true",

@@ -8,13 +8,18 @@ from src.utils import accuracy_fn
 
 
 class MLP(nn.Module):
+
+    def forward(self, x):
+        x = x.view(x.size(0), -1)  # flatten input
+        return self.model(x)
+
     """
     An MLP network which does classification.
 
     It should not use any convolutional layers.
     """
 
-    def __init__(self, input_size, n_classes, hidden_layer=1):
+    def __init__(self, input_size, n_classes, hidden_layers = [256,128,64]):
         """
         Initialize the network.
 
@@ -27,10 +32,17 @@ class MLP(nn.Module):
         """
         super().__init__()
 
-        self.fc1 = nn.Linear(input_size, hidden_layer)
-        self.fc2 = nn.Linear(hidden_layer, hidden_layer)
-        self.fc3 = nn.Linear(hidden_layer, n_classes)
+        layers = []
 
+        in_size = input_size
+        for h in hidden_layers:
+            layers.append(nn.Linear(in_size, h))
+            layers.append(nn.BatchNorm1d(h))
+            layers.append(nn.ReLU())
+            in_size = h
+
+        layers.append(nn.Linear(in_size, n_classes))
+        self.model = nn.Sequential(*layers)
 
     def forward(self, x):
         """
@@ -42,14 +54,8 @@ class MLP(nn.Module):
             preds (tensor): logits of predictions of shape (N, C)
                 Reminder: logits are value pre-softmax.
         """
-        #x = x.flatten(-3)
-
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        preds = self.fc3(x)
-
-        return preds
-
+#        x = x.view(x.size(0), -1)  # flatten input
+        return self.model(x)
 
 class CNN(nn.Module):
     """
