@@ -74,13 +74,30 @@ class CNN(nn.Module):
         Arguments:
             input_channels (int): number of channels in the input
             n_classes (int): number of classes to predict
+
         """
+    #### WRITE YOUR CODE HERE!
+
+        ## i want to use 2 convolutional layers (with ReLU and MaxPooling)
+        ##and 2 Fully Connected layers
+
+    
         super().__init__()
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
+
+        # First convolution: input_channels -> 32 filters, 3x3 kernel, padding=1 keeps size same
+        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=3, padding=1)
+        # Max pooling halves the image size
+        self.pool = nn.MaxPool2d(2, 2)
+
+        # Second convolution: 32 -> 64 filters
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+
+        # After two poolings, input size of 28x28 becomes 7x7:
+        # 28 -> 14 -> 7 (each pooling halves the height and width)
+        self.fc1 = nn.Linear(64 * 7 * 7, 128)  # Hidden fully connected layer
+        self.fc2 = nn.Linear(128, n_classes)  # Output layer
+        
+       
 
     def forward(self, x):
         """
@@ -97,6 +114,14 @@ class CNN(nn.Module):
         #### WRITE YOUR CODE HERE!
         ###
         ##
+        # Note: we first flatten the images into vectors
+        # This is done over the last 3 dimensions: (channel, height, width)
+        
+        x = self.pool(F.relu(self.conv1(x)))  # -> (N, 32, 14, 14)
+        x = self.pool(F.relu(self.conv2(x)))  # -> (N, 64, 7, 7)
+        x = x.view(x.size(0), -1)             # Flatten to (N, 64*7*7)
+        x = F.relu(self.fc1(x))               # -> (N, 128)
+        preds = self.fc2(x)                   # -> (N, n_classes)
         return preds
 
 
