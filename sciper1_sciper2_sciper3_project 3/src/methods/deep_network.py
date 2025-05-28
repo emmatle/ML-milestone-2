@@ -58,11 +58,7 @@ class MLP(nn.Module):
         return self.model(x)
 
 class CNN(nn.Module):
-    """
-    A CNN which does classification.
-
-    It should use at least one convolutional layer.
-    """
+    """ CNN expects inputs of shape (N, 3, 28, 28). """
 
     def __init__(self, input_channels, n_classes):
         """
@@ -74,30 +70,21 @@ class CNN(nn.Module):
         Arguments:
             input_channels (int): number of channels in the input
             n_classes (int): number of classes to predict
-
         """
-    #### WRITE YOUR CODE HERE!
+        super(CNN, self).__init__()
 
-        ## i want to use 2 convolutional layers (with ReLU and MaxPooling)
-        ##and 2 Fully Connected layers
-
-    
-        super().__init__()
-
-        # First convolution: input_channels -> 32 filters, 3x3 kernel, padding=1 keeps size same
-        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=3, padding=1)
-        # Max pooling halves the image size
-        self.pool = nn.MaxPool2d(2, 2)
-
-        # Second convolution: 32 -> 64 filters
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
-
-        # After two poolings, input size of 28x28 becomes 7x7:
-        # 28 -> 14 -> 7 (each pooling halves the height and width)
-        self.fc1 = nn.Linear(64 * 7 * 7, 128)  # Hidden fully connected layer
-        self.fc2 = nn.Linear(128, n_classes)  # Output layer
+        # First convolutional layer: 3 input channels -> 6 output channels
+        self.conv2d1 = nn.Conv2d(in_channels=input_channels, out_channels=6, kernel_size=5, padding=2)
         
-       
+        # Second convolutional layer: 6 -> 16 channels
+        self.conv2d2 = nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, padding=2)
+        
+        # After conv/pooling we flatten for fully-connected layers
+        # From the output size after pooling: 28 → 14 → 7, channels: 16
+        # So final feature map size: 16 × 7 × 7 = 784
+        self.fc1 = nn.Linear(16 * 7 * 7, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, n_classes)
 
     def forward(self, x):
         """
@@ -109,20 +96,22 @@ class CNN(nn.Module):
             preds (tensor): logits of predictions of shape (N, C)
                 Reminder: logits are value pre-softmax.
         """
-        ##
-        ###
-        #### WRITE YOUR CODE HERE!
-        ###
-        ##
-        # Note: we first flatten the images into vectors
-        # This is done over the last 3 dimensions: (channel, height, width)
-        
-        x = self.pool(F.relu(self.conv1(x)))  # -> (N, 32, 14, 14)
-        x = self.pool(F.relu(self.conv2(x)))  # -> (N, 64, 7, 7)
-        x = x.view(x.size(0), -1)             # Flatten to (N, 64*7*7)
-        x = F.relu(self.fc1(x))               # -> (N, 128)
-        preds = self.fc2(x)                   # -> (N, n_classes)
-        return preds
+        # Apply first convolution + ReLU + Max Pooling
+        x = F.max_pool2d(F.relu(self.conv2d1(x)), kernel_size=2)
+
+        # Apply second convolution + ReLU + Max Pooling
+        x = F.max_pool2d(F.relu(self.conv2d2(x)), kernel_size=2)
+
+        # Flatten for FC layers
+        x = torch.flatten(x, 1)  # or x.view(x.size(0), -1)
+
+        # Fully connected layers with ReLU
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+
+        # Final output layer (no softmax, returns logits)
+        x = self.fc3(x)
+        return x
 
 
 class Trainer(object):
