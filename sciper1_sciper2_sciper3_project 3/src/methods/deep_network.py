@@ -3,23 +3,24 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import TensorDataset, DataLoader
 from src.utils import accuracy_fn
+import matplotlib.pyplot as plt
 
 ## MS2
 
 
 class MLP(nn.Module):
-
+    """
     def forward(self, x):
         x = x.view(x.size(0), -1)  # flatten input
         return self.model(x)
 
-    """
+    
     An MLP network which does classification.
 
     It should not use any convolutional layers.
     """
 
-    def __init__(self, input_size, n_classes, hidden_layers = [256,128,64]):
+    def __init__(self, input_size, n_classes, hidden_layers = [256,128,64], dropout_p = 0.3):
         """
         Initialize the network.
 
@@ -27,7 +28,8 @@ class MLP(nn.Module):
             __init__(self, input_size, n_classes, my_arg=32)
 
         Arguments:
-            input_size (int): size of the input
+            input_size (int): size of the inputTrain set: accuracy = 68.183% - F1-score = 0.147641
+Validation set:  accuracy = 68.030% - F1-score = 0.125328
             n_classes (int): number of classes to predict
         """
         super().__init__()
@@ -39,10 +41,17 @@ class MLP(nn.Module):
             layers.append(nn.Linear(in_size, h))
             layers.append(nn.BatchNorm1d(h))
             layers.append(nn.ReLU())
+            layers.append(nn.Dropout(p=dropout_p))             # Dropout for regularisation
             in_size = h
 
         layers.append(nn.Linear(in_size, n_classes))
         self.model = nn.Sequential(*layers)
+
+        # Initialise weights
+        for layer in self.model:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_uniform_(layer.weight)
+
 
     def forward(self, x):
         """
@@ -149,8 +158,10 @@ class Trainer(object):
         Arguments:
             dataloader (DataLoader): dataloader for training data
         """
+        # epoch_losses = []  # List to store loss for each epoch
         for ep in range(self.epochs):
             self.train_one_epoch(dataloader, ep)
+            
 
             ### WRITE YOUR CODE HERE if you want to do add something else at each epoch
 

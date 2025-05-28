@@ -7,6 +7,8 @@ from src.data import load_data
 from src.methods.deep_network import MLP, CNN, Trainer
 from src.methods.dummy_methods import DummyClassifier
 from src.utils import normalize_fn, append_bias_term, accuracy_fn, macrof1_fn, get_n_classes
+import matplotlib as plt
+import torch
 
 '''
 ############## COMMENTARY SECTION ###############################################################################################
@@ -48,6 +50,16 @@ def main(args):
         pass
 
     ## 3. Initialize the method you want to use.
+    """
+    Tried adding this, but when run it gave an error and said that get_n_classes is not compatible with torch bc it uses numpy
+    The get_n_classes fct is in scr/utils.py so i am not sure we are allowed to modify it  
+    ## 3. Add GPU support
+    device = torch.device(args.device if torch.cuda.is_available() or args.device == "mps" else "cpu")
+    xtrain = torch.tensor(xtrain).to(device)
+    xtest = torch.tensor(xtest).to(device)
+    ytrain = torch.tensor(ytrain).to(device)
+    ytest = torch.tensor(ytest).to(device)
+    """
 
     # Neural Networks (MS2)
 
@@ -94,7 +106,7 @@ def main(args):
     print(f"Validation set:  accuracy = {acc:.3f}% - F1-score = {macrof1:.6f}")
 
 
-    ### WRITE YOUR CODE HERE if you want to add other outputs, visualization, etc.
+    ### WRITE YOUR CODE HERE if you want to add other outputs, visualization, etc.89644
 
 
 if __name__ == '__main__':
@@ -119,6 +131,6 @@ if __name__ == '__main__':
 
 
     # "args" will keep in memory the arguments and their values,
-    # which can be accessed as "args.data", for example.
+    # which can be accessed as "args.data", for example. 256
     args = parser.parse_args()
     main(args)
