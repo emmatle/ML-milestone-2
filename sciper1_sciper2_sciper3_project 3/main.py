@@ -29,8 +29,13 @@ def main(args):
     """
     ## 1. First, we load our data and flatten the images into vectors
     xtrain, xtest, ytrain, ytest = load_data()
-    xtrain = xtrain.reshape(xtrain.shape[0], -1)
-    xtest = xtest.reshape(xtest.shape[0], -1)
+
+    ##for CNN method i can't flatten my data 
+    #xtrain = xtrain.reshape(xtrain.shape[0], -1)
+    #xtest = xtest.reshape(xtest.shape[0], -1)
+    if args.nn_type != "cnn":
+        xtrain = xtrain.reshape(xtrain.shape[0], -1)
+        xtest = xtest.reshape(xtest.shape[0], -1)
 
     ## 2. Then we must prepare it. This is were you can create a validation set,
     #  normalize, add bias, etc.
@@ -85,7 +90,7 @@ def main(args):
         preds = method_obj.predict(xtest)
 
     elif args.nn_type == "cnn":
-        model = MLP(input_size, n_classes)
+        model = CNN(input_size, n_classes)
         summary(model)
         method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
         preds_train = method_obj.fit(xtrain, ytrain)

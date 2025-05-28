@@ -109,7 +109,9 @@ class CNN(nn.Module):
         x = F.max_pool2d(F.relu(self.conv2d1(x)), kernel_size=2)
 
         # Apply second convolution + ReLU + Max Pooling
-        x = F.max_pool2d(F.relu(self.conv2d2(x)), kernel_size=2)
+        #x = F.max_pool2d(F.relu(self.conv2d2(x)), kernel_size=2)
+        #use adaptative pooling to erase the dimension problem 
+        x = F.adaptive_max_pool2d(F.relu(self.conv2d2(x)), output_size=(7, 7))
 
         # Flatten for FC layers
         x = torch.flatten(x, 1)  # or x.view(x.size(0), -1)
