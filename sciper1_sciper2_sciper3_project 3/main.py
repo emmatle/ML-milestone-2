@@ -9,6 +9,7 @@ from src.methods.dummy_methods import DummyClassifier
 from src.utils import normalize_fn, append_bias_term, accuracy_fn, macrof1_fn, get_n_classes
 import matplotlib as plt
 import torch
+import time
 
 '''
 ############## COMMENTARY SECTION ###############################################################################################
@@ -39,6 +40,21 @@ def main(args):
 
     ## 2. Then we must prepare it. This is were you can create a validation set,
     #  normalize, add bias, etc.
+
+    # Compute mean and standard deviation based on the dimensionality of xtrain
+    if args.nn_type != "cnn":
+    # Flattened data (2D)
+        means = np.mean(xtrain, axis=0)
+        stds = np.std(xtrain, axis=0)
+    else:
+    # Original data (3D or higher)
+        means = np.mean(xtrain, axis=(0, 1, 2))
+        stds = np.std(xtrain, axis=(0, 1, 2))
+
+    # Normalize the data
+    xtrain = (xtrain - means) / stds
+    xtest = (xtest - means) / stds
+
 
     # Make a validation set
     if not args.test:
@@ -112,6 +128,13 @@ def main(args):
 
 
     ### WRITE YOUR CODE HERE if you want to add other outputs, visualization, etc.89644
+    """
+    import time
+    start = time.time()
+    preds_train = method_obj.fit(xtrain, ytrain)
+    end = time.time()
+    print(f"Training took {end - start:.2f} seconds.")
+    """
 
 
 if __name__ == '__main__':

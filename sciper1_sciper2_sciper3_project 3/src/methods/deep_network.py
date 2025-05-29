@@ -148,7 +148,8 @@ class Trainer(object):
         self.batch_size = batch_size
 
         self.criterion = nn.CrossEntropyLoss()
-        self.optimizer =  torch.optim.SGD(model.parameters(), lr=lr)  ### WRITE YOUR CODE HERE
+        self.optimizer =  torch.optim.Adam(model.parameters(), lr=lr)  ############ change optimiser here, previously it was SGD
+        self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=10, gamma=0.5) #### also scheduler part
 
     def train_all(self, dataloader):
         """
@@ -164,8 +165,9 @@ class Trainer(object):
         for ep in range(self.epochs):
             self.train_one_epoch(dataloader, ep)
             
-
-            ### WRITE YOUR CODE HERE if you want to do add something else at each epoch
+            self.scheduler.step() ##################### this is the schduler part
+        
+        ### WRITE YOUR CODE HERE if you want to do add something else at each epoch
 
     def train_one_epoch(self, dataloader, ep):
         """
