@@ -11,14 +11,6 @@ import matplotlib as plt
 import torch
 import time
 
-'''
-############## COMMENTARY SECTION ###############################################################################################
-Ali: Coucou, il faudra regarder si on a le temps de faire run le truc pour savoir le run time de nos algorithms :)
-
-#################################################################################################################################
-'''
-
-
 def main(args):
     """
     The main function of the script. Do not hesitate to play with it
@@ -31,10 +23,8 @@ def main(args):
     ## 1. First, we load our data and flatten the images into vectors
     xtrain, xtest, ytrain, ytest = load_data()
 
-    ##for CNN method i can't flatten my data 
-    #xtrain = xtrain.reshape(xtrain.shape[0], -1)
-    #xtest = xtest.reshape(xtest.shape[0], -1)
-    if args.nn_type != "cnn":
+    ##for CNN method i can't flatten my data
+    if args.nn_type == "mlp":
         xtrain = xtrain.reshape(xtrain.shape[0], -1)
         xtest = xtest.reshape(xtest.shape[0], -1)
 
@@ -42,14 +32,16 @@ def main(args):
     #  normalize, add bias, etc.
 
     # Compute mean and standard deviation based on the dimensionality of xtrain
-    if args.nn_type != "cnn":
+    if args.nn_type == "mlp":
     # Flattened data (2D)
         means = np.mean(xtrain, axis=0)
         stds = np.std(xtrain, axis=0)
-    else:
+        stds[stds==0]=1
+    if args.nn_type == "cnn":
     # Original data (3D or higher)
         means = np.mean(xtrain, axis=(0, 1, 2))
         stds = np.std(xtrain, axis=(0, 1, 2))
+        stds[stds==0]=1
 
     # Normalize the data
     xtrain = (xtrain - means) / stds
@@ -71,27 +63,27 @@ def main(args):
         pass
 
     ## 3. Initialize the method you want to use.
-    """
-    Tried adding this, but when run it gave an error and said that get_n_classes is not compatible with torch bc it uses numpy
-    The get_n_classes fct is in scr/utils.py so i am not sure we are allowed to modify it  
     ## 3. Add GPU support
-    device = torch.device(args.device if torch.cuda.is_available() or args.device == "mps" else "cpu")
-    xtrain = torch.tensor(xtrain).to(device)
-    xtest = torch.tensor(xtest).to(device)
-    ytrain = torch.tensor(ytrain).to(device)
-    ytest = torch.tensor(ytest).to(device)
-    """
+
+    device = torch.device("cpu") # Default
+
+    if args.device == "cuda":
+        if not torch.cuda.is_available():
+            print("CUDA not available")
+        else: 
+            device = torch.device("cuda")
+
+    elif args.device == "mps":
+        if not torch.backends.mps.is_available():
+            print("MPS not available")
+        else:
+            device = torch.device("mps")
 
     # Neural Networks (MS2)
 
-    # Prepare the model (and data) for Pytorch
-    # Note: you might need to reshape the data depending on the network you use!
-    n_classes = get_n_classes(ytrain)
-    input_size = 0 # Todo
-
     # 3. Initialize the method you want to use
     n_classes = get_n_classes(ytrain)
-    input_size = xtrain.shape[1]
+
 
     if args.nn_type == "dummy":
         model = DummyClassifier(arg1=1, arg2=2)
@@ -99,16 +91,22 @@ def main(args):
         preds = model.predict(xtest)
 
     elif args.nn_type == "mlp":
-        model = MLP(input_size, n_classes, hidden_layers=args.hidden_layers)
+        input_size = xtrain.shape[1]
+        model = MLP(input_size, n_classes, hidden_layers=args.hidden_layers, dropout_p=args.dropout)
         summary(model)
-        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
+        model = model.to(device)
+        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, weight_decay=args.decay)
         preds_train = method_obj.fit(xtrain, ytrain)
         preds = method_obj.predict(xtest)
 
     elif args.nn_type == "cnn":
-        model = CNN(input_size, n_classes)
+        xtrain = xtrain.transpose(0,3,1,2)
+        xtest = xtest.transpose(0,3,1,2)
+        input_channels = xtrain.shape[1]
+        model = CNN(input_channels, n_classes)
         summary(model)
-        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size)
+        model = model.to(device)
+        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, optimizer=args.optim ,weight_decay=args.decay)
         preds_train = method_obj.fit(xtrain, ytrain)
         preds = method_obj.predict(xtest)
 
@@ -127,16 +125,6 @@ def main(args):
     print(f"Validation set:  accuracy = {acc:.3f}% - F1-score = {macrof1:.6f}")
 
 
-    ### WRITE YOUR CODE HERE if you want to add other outputs, visualization, etc.89644
-    """
-    import time
-    start = time.time()
-    preds_train = method_obj.fit(xtrain, ytrain)
-    end = time.time()
-    print(f"Training took {end - start:.2f} seconds.")
-    """
-
-
 if __name__ == '__main__':
     # Definition of the arguments that can be given through the command line (terminal).
     # If an argument is not given, it will take its default value as defined below.
@@ -153,6 +141,9 @@ if __name__ == '__main__':
 
     parser.add_argument('--hidden_layers', type=int, nargs='+', default=[256,128,64])
     parser.add_argument('--lr', type=float, default=1e-3, help="learning rate for methods with learning rate")
+    parser.add_argument('--optim', type=str, default="adamw", help="Optimizer to use for training, can be 'sgd', 'adam', 'adamw'" )
+    parser.add_argument('--dropout', type=float, default=0.2, help="dropout p")
+    parser.add_argument('--decay', type=float, default=1e-4, help="weight decay for adam")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")

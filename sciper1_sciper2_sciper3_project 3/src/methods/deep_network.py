@@ -41,7 +41,7 @@ Validation set:  accuracy = 68.030% - F1-score = 0.125328
             layers.append(nn.Linear(in_size, h))
             layers.append(nn.BatchNorm1d(h))
             layers.append(nn.ReLU())
-            layers.append(nn.Dropout(p=dropout_p))             # Dropout for regularisation
+            layers.append(nn.Dropout(p=dropout_p))
             in_size = h
 
         layers.append(nn.Linear(in_size, n_classes))
@@ -132,7 +132,7 @@ class Trainer(object):
     It will also serve as an interface between numpy and pytorch.
     """
 
-    def __init__(self, model, lr, epochs, batch_size):
+    def __init__(self, model, lr, epochs, batch_size, optimizer="adamw" , weight_decay = 1e-4):
         """
         Initialize the trainer object for a given model.
 
@@ -146,10 +146,16 @@ class Trainer(object):
         self.epochs = epochs
         self.model = model
         self.batch_size = batch_size
+        self.device = next(model.parameters()).device  # Automatically infer device from model
 
         self.criterion = nn.CrossEntropyLoss()
-        self.optimizer =  torch.optim.Adam(model.parameters(), lr=lr)  ############ change optimiser here, previously it was SGD
-        self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=10, gamma=0.5) #### also scheduler part
+        if optimizer=="adamw":
+            self.optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+        if optimizer=="adam":
+            self.optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+        if optimizer=="sgd":
+            self.optimizer = torch.optim.SGD(model.parameters(), lr=lr, weight_decay=weight_decay)
+        self.scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=10, gamma=0.5)
 
     def train_all(self, dataloader):
         """
@@ -184,6 +190,9 @@ class Trainer(object):
         for it, batch in enumerate(dataloader):
             # 5.1 Load a batch, break it down in images and targets.
             x, y = batch
+            x = x.to(self.device)
+            y = y.to(self.device)
+
 
             # 5.2 Run forward pass --> Sequentially call the layers in order
             logits = self.model(x)
@@ -200,9 +209,9 @@ class Trainer(object):
             # 5.6 Zero-out the accumulated gradients.
             self.optimizer.zero_grad()
 
-            print('\r[Epoch {}/{}] Batch {}/{} - Loss: {:.4f}'.format(
-            ep + 1, self.epochs, it + 1, len(dataloader), loss.item(),
-            end=''))
+            if it % 10 == 0 or it == len(dataloader) - 1:
+                print('\r[Epoch {}/{}] Batch {}/{} - Loss: {:.4f}'.format(
+                    ep + 1, self.epochs, it + 1, len(dataloader), loss.item()), end='')
 
     def predict_torch(self, dataloader):
         """
@@ -228,6 +237,7 @@ class Trainer(object):
         with torch.no_grad():
             for batch in dataloader:
                 x = batch[0]  # we don't need labels during prediction
+                x = x.to(self.device)
                 logits = self.model(x)
                 preds = logits.argmax(dim=1)  # shape: (batch_size,)
                 all_preds.append(preds)
@@ -250,8 +260,8 @@ class Trainer(object):
         """
 
         # First, prepare data for pytorch
-        train_dataset = TensorDataset(torch.from_numpy(training_data).float(),
-                                      torch.from_numpy(training_labels))
+        train_dataset = TensorDataset(torch.from_numpy(training_data).float().to(self.device),
+                                      torch.from_numpy(training_labels).to(self.device))
         train_dataloader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
 
         self.train_all(train_dataloader)
@@ -270,7 +280,7 @@ class Trainer(object):
             pred_labels (array): labels of shape (N,)
         """
         # First, prepare data for pytorch
-        test_dataset = TensorDataset(torch.from_numpy(test_data).float())
+        test_dataset = TensorDataset(torch.from_numpy(test_data).float().to(self.device))
         test_dataloader = DataLoader(test_dataset, batch_size=self.batch_size, shuffle=False)
 
         pred_labels = self.predict_torch(test_dataloader)
