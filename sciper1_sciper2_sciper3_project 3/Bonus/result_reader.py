@@ -30,7 +30,7 @@ def extract_best_experiment(filepath):
     return best_f1, best_params, best_experiment
 
 # Usage
-file_path = 'hyperparam_cnn_results.txt'
+file_path = 'hyperparam_mlp_results.txt'
 best_f1, best_params, best_experiment = extract_best_experiment(file_path)
 
 print(f"Best Validation F1-score: {best_f1}")

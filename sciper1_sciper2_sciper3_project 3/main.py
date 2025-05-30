@@ -104,7 +104,7 @@ def main(args):
         xtest = xtest.transpose(0,3,1,2)
         input_channels = xtrain.shape[1]
 
-        if args.resnet == "true":
+        if args.resnet:
             model = ResNet18(n_classes)
         else:
             model = CNN(input_channels, n_classes, kernel_size=args.kernel, padding=args.padding)
@@ -143,15 +143,15 @@ if __name__ == '__main__':
     parser.add_argument('--device', type=str, default="cpu",
                         help="Device to use for the training, it can be 'cpu' | 'cuda' | 'mps'")
 
-    parser.add_argument('--hidden_layers', type=int, nargs='+', default=[256,128,64])
+    parser.add_argument('--hidden_layers', type=int, nargs='+', default=[256,128])
     parser.add_argument('--lr', type=float, default=1e-3, help="learning rate for methods with learning rate")
     parser.add_argument('--optim', type=str, default="adamw", help="Optimizer to use for training, can be 'sgd', 'adam', 'adamw'" )
     parser.add_argument('--dropout', type=float, default=0.2, help="dropout p")
     parser.add_argument('--decay', type=float, default=1e-4, help="weight decay for adam")
-    parser.add_argument('--kernel', type=int, default=3, help="kernel size")
-    parser.add_argument('--padding', type=int, default=1, help="padding size")
+    parser.add_argument('--kernel', type=int, default=5, help="kernel size")
+    parser.add_argument('--padding', type=int, default=2, help="padding size")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
-    parser.add_argument('--resnet', type=bool, default=False, help="Use the Resnet18 model to classify")
+    parser.add_argument('--resnet', action="store_true", help="Use the Resnet18 model to classify")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")
 

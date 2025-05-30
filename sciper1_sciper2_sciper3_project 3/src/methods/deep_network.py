@@ -20,7 +20,7 @@ class MLP(nn.Module):
     It should not use any convolutional layers.
     """
 
-    def __init__(self, input_size, n_classes, hidden_layers = [256,128,64], dropout_p = 0.3):
+    def __init__(self, input_size, n_classes, hidden_layers = [256,128], dropout_p = 0.2):
         """
         Initialize the network.
 
@@ -93,7 +93,8 @@ class CNN(nn.Module):
         # So final feature map size: 16 × 7 × 7 = 784
         self.fc1 = nn.Linear(16 * 7 * 7, 120)
         self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, n_classes)
+        self.fc3 = nn.Linear(84, 32)
+        self.fc4 = nn.Linear(32, n_classes)
 
     def forward(self, x):
         """
@@ -119,9 +120,10 @@ class CNN(nn.Module):
         # Fully connected layers with ReLU
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
 
         # Final output layer (no softmax, returns logits)
-        x = self.fc3(x)
+        x = self.fc4(x)
         return x
 
 class ResNet18(nn.Module):
