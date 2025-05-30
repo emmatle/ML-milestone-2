@@ -69,7 +69,7 @@ Validation set:  accuracy = 68.030% - F1-score = 0.125328
 class CNN(nn.Module):
     """ CNN expects inputs of shape (N, 3, 28, 28). """
 
-    def __init__(self, input_channels, n_classes):
+    def __init__(self, input_channels, n_classes, kernel_size=3, padding=1):
         """
         Initialize the network.
 
@@ -83,10 +83,10 @@ class CNN(nn.Module):
         super(CNN, self).__init__()
 
         # First convolutional layer: 3 input channels -> 6 output channels
-        self.conv2d1 = nn.Conv2d(in_channels=input_channels, out_channels=6, kernel_size=5, padding=2)
+        self.conv2d1 = nn.Conv2d(in_channels=input_channels, out_channels=6, kernel_size=kernel_size, padding=padding)
         
         # Second convolutional layer: 6 -> 16 channels
-        self.conv2d2 = nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, padding=2)
+        self.conv2d2 = nn.Conv2d(in_channels=6, out_channels=16, kernel_size=kernel_size, padding=padding)
         
         # After conv/pooling we flatten for fully-connected layers
         # From the output size after pooling: 28 → 14 → 7, channels: 16

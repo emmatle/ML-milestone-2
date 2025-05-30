@@ -103,7 +103,7 @@ def main(args):
         xtrain = xtrain.transpose(0,3,1,2)
         xtest = xtest.transpose(0,3,1,2)
         input_channels = xtrain.shape[1]
-        model = CNN(input_channels, n_classes)
+        model = CNN(input_channels, n_classes, kernel_size=args.kernel, padding=args.padding)
         summary(model)
         model = model.to(device)
         method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, optimizer=args.optim ,weight_decay=args.decay)
@@ -144,6 +144,8 @@ if __name__ == '__main__':
     parser.add_argument('--optim', type=str, default="adamw", help="Optimizer to use for training, can be 'sgd', 'adam', 'adamw'" )
     parser.add_argument('--dropout', type=float, default=0.2, help="dropout p")
     parser.add_argument('--decay', type=float, default=1e-4, help="weight decay for adam")
+    parser.add_argument('--kernel', type=int, default=3, help="kernel size")
+    parser.add_argument('--padding', type=int, default=1, help="padding size")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")
