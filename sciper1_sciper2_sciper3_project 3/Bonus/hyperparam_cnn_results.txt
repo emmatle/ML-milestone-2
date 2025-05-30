@@ -1,0 +1,1633 @@
+Running 288 experiments (0 MLP + 288 CNN)...
+
+
+=== Experiment 1/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+100%|██████████| 19.7M/19.7M [00:31<00:00, 622kB/s]
+[Epoch 30/30] Batch 373/373 - Loss: 0.4098
+Train set: accuracy = 91.001% - F1-score = 0.845330
+Validation set:  accuracy = 67.745% - F1-score = 0.302955
+
+
+=== Experiment 2/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4263
+Train set: accuracy = 84.419% - F1-score = 0.677068
+Validation set:  accuracy = 66.603% - F1-score = 0.304353
+
+
+=== Experiment 3/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.8059
+Train set: accuracy = 83.529% - F1-score = 0.644520
+Validation set:  accuracy = 67.840% - F1-score = 0.278645
+
+
+=== Experiment 4/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0403
+Train set: accuracy = 82.320% - F1-score = 0.637755
+Validation set:  accuracy = 68.411% - F1-score = 0.339650
+
+
+=== Experiment 5/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0030
+Train set: accuracy = 95.064% - F1-score = 0.917203
+Validation set:  accuracy = 72.883% - F1-score = 0.432814
+
+
+=== Experiment 6/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2291
+Train set: accuracy = 88.314% - F1-score = 0.763636
+Validation set:  accuracy = 68.887% - F1-score = 0.425000
+
+
+=== Experiment 7/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0816
+Train set: accuracy = 93.687% - F1-score = 0.864121
+Validation set:  accuracy = 68.696% - F1-score = 0.363477
+
+
+=== Experiment 8/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0145
+Train set: accuracy = 94.426% - F1-score = 0.907760
+Validation set:  accuracy = 70.029% - F1-score = 0.376831
+
+
+=== Experiment 9/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0764
+Train set: accuracy = 97.011% - F1-score = 0.949784
+Validation set:  accuracy = 67.079% - F1-score = 0.353666
+
+
+=== Experiment 10/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4020
+Train set: accuracy = 90.514% - F1-score = 0.839264
+Validation set:  accuracy = 72.312% - F1-score = 0.441203
+
+
+=== Experiment 11/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2880
+Train set: accuracy = 96.642% - F1-score = 0.928200
+Validation set:  accuracy = 69.077% - F1-score = 0.405716
+
+
+=== Experiment 12/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0324
+Train set: accuracy = 94.157% - F1-score = 0.907360
+Validation set:  accuracy = 69.553% - F1-score = 0.432346
+
+
+=== Experiment 13/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0210
+Train set: accuracy = 98.573% - F1-score = 0.963585
+Validation set:  accuracy = 71.931% - F1-score = 0.493774
+
+
+=== Experiment 14/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0474
+Train set: accuracy = 90.128% - F1-score = 0.799774
+Validation set:  accuracy = 74.976% - F1-score = 0.527545
+
+
+=== Experiment 15/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0621
+Train set: accuracy = 98.875% - F1-score = 0.977568
+Validation set:  accuracy = 71.836% - F1-score = 0.460859
+
+
+=== Experiment 16/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0625
+Train set: accuracy = 93.721% - F1-score = 0.904088
+Validation set:  accuracy = 71.456% - F1-score = 0.438975
+
+
+=== Experiment 17/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6081
+Train set: accuracy = 88.549% - F1-score = 0.718936
+Validation set:  accuracy = 73.264% - F1-score = 0.410705
+
+
+=== Experiment 18/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4357
+Train set: accuracy = 86.081% - F1-score = 0.714575
+Validation set:  accuracy = 74.596% - F1-score = 0.532471
+
+
+=== Experiment 19/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0224
+Train set: accuracy = 87.508% - F1-score = 0.715078
+Validation set:  accuracy = 75.071% - F1-score = 0.464871
+
+
+=== Experiment 20/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.7610
+Train set: accuracy = 87.676% - F1-score = 0.714275
+Validation set:  accuracy = 71.170% - F1-score = 0.422363
+
+
+=== Experiment 21/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.5392
+Train set: accuracy = 82.186% - F1-score = 0.604718
+Validation set:  accuracy = 73.168% - F1-score = 0.442941
+
+
+=== Experiment 22/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.0281
+Train set: accuracy = 81.783% - F1-score = 0.586034
+Validation set:  accuracy = 75.642% - F1-score = 0.472290
+
+
+=== Experiment 23/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.7444
+Train set: accuracy = 84.570% - F1-score = 0.645458
+Validation set:  accuracy = 73.454% - F1-score = 0.440676
+
+
+=== Experiment 24/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2182
+Train set: accuracy = 82.119% - F1-score = 0.599893
+Validation set:  accuracy = 74.500% - F1-score = 0.473577
+
+
+=== Experiment 25/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0648
+Train set: accuracy = 74.043% - F1-score = 0.402875
+Validation set:  accuracy = 73.930% - F1-score = 0.361083
+
+
+=== Experiment 26/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.6305
+Train set: accuracy = 74.345% - F1-score = 0.369140
+Validation set:  accuracy = 73.739% - F1-score = 0.339172
+
+
+=== Experiment 27/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3020
+Train set: accuracy = 73.925% - F1-score = 0.349465
+Validation set:  accuracy = 71.075% - F1-score = 0.259177
+
+
+=== Experiment 28/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2141
+Train set: accuracy = 73.858% - F1-score = 0.349509
+Validation set:  accuracy = 71.646% - F1-score = 0.293738
+
+
+=== Experiment 29/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.7738
+Train set: accuracy = 72.700% - F1-score = 0.300118
+Validation set:  accuracy = 68.887% - F1-score = 0.268185
+
+
+=== Experiment 30/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.8823
+Train set: accuracy = 72.364% - F1-score = 0.310401
+Validation set:  accuracy = 72.027% - F1-score = 0.288201
+
+
+=== Experiment 31/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.2638
+Train set: accuracy = 73.925% - F1-score = 0.334310
+Validation set:  accuracy = 70.124% - F1-score = 0.310036
+
+
+=== Experiment 32/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.1347
+Train set: accuracy = 73.405% - F1-score = 0.343927
+Validation set:  accuracy = 71.170% - F1-score = 0.301327
+
+
+=== Experiment 33/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.5863
+Train set: accuracy = 71.357% - F1-score = 0.284079
+Validation set:  accuracy = 70.409% - F1-score = 0.254500
+
+
+=== Experiment 34/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.8374
+Train set: accuracy = 72.062% - F1-score = 0.272628
+Validation set:  accuracy = 71.265% - F1-score = 0.282750
+
+
+=== Experiment 35/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4174
+Train set: accuracy = 71.239% - F1-score = 0.273791
+Validation set:  accuracy = 70.695% - F1-score = 0.279160
+
+
+=== Experiment 36/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2265
+Train set: accuracy = 71.743% - F1-score = 0.275850
+Validation set:  accuracy = 68.316% - F1-score = 0.246767
+
+
+=== Experiment 37/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.2504
+Train set: accuracy = 78.005% - F1-score = 0.479152
+Validation set:  accuracy = 70.409% - F1-score = 0.250055
+
+
+=== Experiment 38/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.5225
+Train set: accuracy = 66.857% - F1-score = 0.118262
+Validation set:  accuracy = 68.411% - F1-score = 0.118412
+
+
+=== Experiment 39/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3660
+Train set: accuracy = 76.192% - F1-score = 0.455281
+Validation set:  accuracy = 70.219% - F1-score = 0.323259
+
+
+=== Experiment 40/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.7403
+Train set: accuracy = 67.075% - F1-score = 0.114705
+Validation set:  accuracy = 66.413% - F1-score = 0.114024
+
+
+=== Experiment 41/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.5479
+Train set: accuracy = 73.942% - F1-score = 0.465260
+Validation set:  accuracy = 67.555% - F1-score = 0.289280
+
+
+=== Experiment 42/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1956
+Train set: accuracy = 89.540% - F1-score = 0.805950
+Validation set:  accuracy = 68.982% - F1-score = 0.412120
+
+
+=== Experiment 43/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2749
+Train set: accuracy = 80.138% - F1-score = 0.581148
+Validation set:  accuracy = 67.745% - F1-score = 0.330294
+
+
+=== Experiment 44/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0907
+Train set: accuracy = 89.842% - F1-score = 0.788513
+Validation set:  accuracy = 69.648% - F1-score = 0.366447
+
+
+=== Experiment 45/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.8717
+Train set: accuracy = 84.721% - F1-score = 0.726493
+Validation set:  accuracy = 71.170% - F1-score = 0.401214
+
+
+=== Experiment 46/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0219
+Train set: accuracy = 91.874% - F1-score = 0.855592
+Validation set:  accuracy = 70.695% - F1-score = 0.317153
+
+
+=== Experiment 47/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9567
+Train set: accuracy = 84.688% - F1-score = 0.739057
+Validation set:  accuracy = 67.745% - F1-score = 0.394719
+
+
+=== Experiment 48/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9615
+Train set: accuracy = 90.010% - F1-score = 0.849768
+Validation set:  accuracy = 70.599% - F1-score = 0.379326
+
+
+=== Experiment 49/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0623
+Train set: accuracy = 98.791% - F1-score = 0.983436
+Validation set:  accuracy = 68.792% - F1-score = 0.402890
+
+
+=== Experiment 50/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0725
+Train set: accuracy = 98.909% - F1-score = 0.986112
+Validation set:  accuracy = 71.075% - F1-score = 0.423497
+
+
+=== Experiment 51/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0458
+Train set: accuracy = 97.448% - F1-score = 0.965160
+Validation set:  accuracy = 71.170% - F1-score = 0.419456
+
+
+=== Experiment 52/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0029
+Train set: accuracy = 99.799% - F1-score = 0.997216
+Validation set:  accuracy = 71.361% - F1-score = 0.434772
+
+
+=== Experiment 53/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2849
+Train set: accuracy = 91.001% - F1-score = 0.835499
+Validation set:  accuracy = 72.788% - F1-score = 0.449693
+
+
+=== Experiment 54/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2637
+Train set: accuracy = 91.085% - F1-score = 0.810347
+Validation set:  accuracy = 73.549% - F1-score = 0.449269
+
+
+=== Experiment 55/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4345
+Train set: accuracy = 90.447% - F1-score = 0.815881
+Validation set:  accuracy = 72.883% - F1-score = 0.419374
+
+
+=== Experiment 56/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0860
+Train set: accuracy = 96.692% - F1-score = 0.945949
+Validation set:  accuracy = 74.120% - F1-score = 0.466652
+
+
+=== Experiment 57/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0672
+Train set: accuracy = 86.081% - F1-score = 0.689280
+Validation set:  accuracy = 73.454% - F1-score = 0.436652
+
+
+=== Experiment 58/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0969
+Train set: accuracy = 88.046% - F1-score = 0.758031
+Validation set:  accuracy = 72.312% - F1-score = 0.398297
+
+
+=== Experiment 59/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4770
+Train set: accuracy = 84.503% - F1-score = 0.657109
+Validation set:  accuracy = 74.215% - F1-score = 0.438627
+
+
+=== Experiment 60/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0930
+Train set: accuracy = 86.568% - F1-score = 0.742262
+Validation set:  accuracy = 73.834% - F1-score = 0.431931
+
+
+=== Experiment 61/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4407
+Train set: accuracy = 73.674% - F1-score = 0.341888
+Validation set:  accuracy = 70.790% - F1-score = 0.332627
+
+
+=== Experiment 62/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.1024
+Train set: accuracy = 73.422% - F1-score = 0.330957
+Validation set:  accuracy = 70.504% - F1-score = 0.308194
+
+
+=== Experiment 63/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.5132
+Train set: accuracy = 73.338% - F1-score = 0.327662
+Validation set:  accuracy = 72.122% - F1-score = 0.326533
+
+
+=== Experiment 64/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4572
+Train set: accuracy = 73.875% - F1-score = 0.384608
+Validation set:  accuracy = 72.883% - F1-score = 0.348242
+
+
+=== Experiment 65/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2187
+Train set: accuracy = 72.213% - F1-score = 0.312021
+Validation set:  accuracy = 68.792% - F1-score = 0.263195
+
+
+=== Experiment 66/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2865
+Train set: accuracy = 71.776% - F1-score = 0.292890
+Validation set:  accuracy = 69.458% - F1-score = 0.279111
+
+
+=== Experiment 67/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3089
+Train set: accuracy = 71.793% - F1-score = 0.298641
+Validation set:  accuracy = 72.122% - F1-score = 0.291166
+
+
+=== Experiment 68/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.8966
+Train set: accuracy = 72.364% - F1-score = 0.293624
+Validation set:  accuracy = 69.933% - F1-score = 0.273220
+
+
+=== Experiment 69/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1266
+Train set: accuracy = 71.424% - F1-score = 0.289907
+Validation set:  accuracy = 69.648% - F1-score = 0.256882
+
+
+=== Experiment 70/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2210
+Train set: accuracy = 70.803% - F1-score = 0.272449
+Validation set:  accuracy = 69.458% - F1-score = 0.247001
+
+
+=== Experiment 71/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.0524
+Train set: accuracy = 71.558% - F1-score = 0.287843
+Validation set:  accuracy = 69.933% - F1-score = 0.287958
+
+
+=== Experiment 72/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.0982
+Train set: accuracy = 71.256% - F1-score = 0.258469
+Validation set:  accuracy = 70.790% - F1-score = 0.239250
+
+
+=== Experiment 73/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3204
+Train set: accuracy = 90.631% - F1-score = 0.844920
+Validation set:  accuracy = 71.361% - F1-score = 0.394691
+
+
+=== Experiment 74/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.5490
+Train set: accuracy = 82.152% - F1-score = 0.667706
+Validation set:  accuracy = 70.790% - F1-score = 0.396384
+
+
+=== Experiment 75/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2923
+Train set: accuracy = 84.688% - F1-score = 0.720779
+Validation set:  accuracy = 69.458% - F1-score = 0.358984
+
+
+=== Experiment 76/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.9897
+Train set: accuracy = 85.695% - F1-score = 0.720586
+Validation set:  accuracy = 68.411% - F1-score = 0.375265
+
+
+=== Experiment 77/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0202
+Train set: accuracy = 96.155% - F1-score = 0.935210
+Validation set:  accuracy = 69.458% - F1-score = 0.365336
+
+
+=== Experiment 78/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4652
+Train set: accuracy = 88.163% - F1-score = 0.774867
+Validation set:  accuracy = 69.743% - F1-score = 0.421445
+
+
+=== Experiment 79/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0209
+Train set: accuracy = 96.541% - F1-score = 0.936229
+Validation set:  accuracy = 68.982% - F1-score = 0.372091
+
+
+=== Experiment 80/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.5079
+Train set: accuracy = 92.159% - F1-score = 0.869753
+Validation set:  accuracy = 68.696% - F1-score = 0.381301
+
+
+=== Experiment 81/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0101
+Train set: accuracy = 97.314% - F1-score = 0.959041
+Validation set:  accuracy = 69.743% - F1-score = 0.408557
+
+
+=== Experiment 82/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1291
+Train set: accuracy = 94.224% - F1-score = 0.885917
+Validation set:  accuracy = 70.599% - F1-score = 0.442657
+
+
+=== Experiment 83/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0223
+Train set: accuracy = 97.482% - F1-score = 0.957924
+Validation set:  accuracy = 70.409% - F1-score = 0.368694
+
+
+=== Experiment 84/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.6400
+Train set: accuracy = 89.909% - F1-score = 0.820749
+Validation set:  accuracy = 70.885% - F1-score = 0.374471
+
+
+=== Experiment 85/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0116
+Train set: accuracy = 95.349% - F1-score = 0.902313
+Validation set:  accuracy = 73.168% - F1-score = 0.453287
+
+
+=== Experiment 86/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3170
+Train set: accuracy = 92.898% - F1-score = 0.865490
+Validation set:  accuracy = 75.167% - F1-score = 0.481565
+
+
+=== Experiment 87/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2928
+Train set: accuracy = 94.510% - F1-score = 0.907140
+Validation set:  accuracy = 74.025% - F1-score = 0.479999
+
+
+=== Experiment 88/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2123
+Train set: accuracy = 92.327% - F1-score = 0.843001
+Validation set:  accuracy = 73.644% - F1-score = 0.483877
+
+
+=== Experiment 89/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1215
+Train set: accuracy = 92.327% - F1-score = 0.834880
+Validation set:  accuracy = 72.217% - F1-score = 0.438465
+
+
+=== Experiment 90/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4294
+Train set: accuracy = 87.777% - F1-score = 0.750024
+Validation set:  accuracy = 72.502% - F1-score = 0.421215
+
+
+=== Experiment 91/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1104
+Train set: accuracy = 89.725% - F1-score = 0.765976
+Validation set:  accuracy = 74.025% - F1-score = 0.457821
+
+
+=== Experiment 92/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.9804
+Train set: accuracy = 84.486% - F1-score = 0.664490
+Validation set:  accuracy = 76.023% - F1-score = 0.448365
+
+
+=== Experiment 93/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0810
+Train set: accuracy = 84.167% - F1-score = 0.647166
+Validation set:  accuracy = 72.598% - F1-score = 0.475860
+
+
+=== Experiment 94/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4413
+Train set: accuracy = 81.061% - F1-score = 0.568062
+Validation set:  accuracy = 75.833% - F1-score = 0.444816
+
+
+=== Experiment 95/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9308
+Train set: accuracy = 81.749% - F1-score = 0.618954
+Validation set:  accuracy = 75.071% - F1-score = 0.494511
+
+
+=== Experiment 96/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4416
+Train set: accuracy = 79.903% - F1-score = 0.567369
+Validation set:  accuracy = 74.691% - F1-score = 0.444232
+
+
+=== Experiment 97/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.5987
+Train set: accuracy = 73.422% - F1-score = 0.326913
+Validation set:  accuracy = 70.409% - F1-score = 0.302468
+
+
+=== Experiment 98/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3390
+Train set: accuracy = 72.733% - F1-score = 0.324408
+Validation set:  accuracy = 71.931% - F1-score = 0.285077
+
+
+=== Experiment 99/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.7541
+Train set: accuracy = 73.237% - F1-score = 0.333285
+Validation set:  accuracy = 72.502% - F1-score = 0.323916
+
+
+=== Experiment 100/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.7522
+Train set: accuracy = 73.187% - F1-score = 0.329687
+Validation set:  accuracy = 72.502% - F1-score = 0.326541
+
+
+=== Experiment 101/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.7907
+Train set: accuracy = 72.381% - F1-score = 0.297094
+Validation set:  accuracy = 70.980% - F1-score = 0.271241
+
+
+=== Experiment 102/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6918
+Train set: accuracy = 72.330% - F1-score = 0.301852
+Validation set:  accuracy = 71.551% - F1-score = 0.273473
+
+
+=== Experiment 103/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.3804
+Train set: accuracy = 73.439% - F1-score = 0.339313
+Validation set:  accuracy = 71.456% - F1-score = 0.296767
+
+
+=== Experiment 104/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6915
+Train set: accuracy = 73.069% - F1-score = 0.303228
+Validation set:  accuracy = 70.124% - F1-score = 0.261366
+
+
+=== Experiment 105/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.8102
+Train set: accuracy = 71.122% - F1-score = 0.243751
+Validation set:  accuracy = 69.458% - F1-score = 0.234532
+
+
+=== Experiment 106/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.3643
+Train set: accuracy = 70.702% - F1-score = 0.264468
+Validation set:  accuracy = 70.409% - F1-score = 0.281737
+
+
+=== Experiment 107/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.4498
+Train set: accuracy = 71.776% - F1-score = 0.279522
+Validation set:  accuracy = 69.553% - F1-score = 0.244604
+
+
+=== Experiment 108/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.3007
+Train set: accuracy = 70.618% - F1-score = 0.255779
+Validation set:  accuracy = 69.172% - F1-score = 0.243874
+
+
+=== Experiment 109/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2307
+Train set: accuracy = 67.428% - F1-score = 0.164775
+Validation set:  accuracy = 66.413% - F1-score = 0.147572
+
+
+=== Experiment 110/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.8211
+Train set: accuracy = 85.074% - F1-score = 0.673818
+Validation set:  accuracy = 69.077% - F1-score = 0.340058
+
+
+=== Experiment 111/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.4483
+Train set: accuracy = 67.646% - F1-score = 0.162834
+Validation set:  accuracy = 64.320% - F1-score = 0.157012
+
+
+=== Experiment 112/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.1411
+Train set: accuracy = 84.318% - F1-score = 0.640108
+Validation set:  accuracy = 68.506% - F1-score = 0.349542
+
+
+=== Experiment 113/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1720
+Train set: accuracy = 84.016% - F1-score = 0.629891
+Validation set:  accuracy = 67.269% - F1-score = 0.322194
+
+
+=== Experiment 114/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0333
+Train set: accuracy = 87.072% - F1-score = 0.782860
+Validation set:  accuracy = 65.747% - F1-score = 0.328976
+
+
+=== Experiment 115/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2996
+Train set: accuracy = 80.154% - F1-score = 0.551699
+Validation set:  accuracy = 66.698% - F1-score = 0.312725
+
+
+=== Experiment 116/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4732
+Train set: accuracy = 89.137% - F1-score = 0.770983
+Validation set:  accuracy = 67.364% - F1-score = 0.334251
+
+
+=== Experiment 117/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1697
+Train set: accuracy = 85.074% - F1-score = 0.671838
+Validation set:  accuracy = 70.314% - F1-score = 0.370948
+
+
+=== Experiment 118/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.4423
+Train set: accuracy = 90.077% - F1-score = 0.837125
+Validation set:  accuracy = 70.314% - F1-score = 0.384414
+
+
+=== Experiment 119/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0771
+Train set: accuracy = 86.417% - F1-score = 0.708151
+Validation set:  accuracy = 69.458% - F1-score = 0.314301
+
+
+=== Experiment 120/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1791
+Train set: accuracy = 89.087% - F1-score = 0.796495
+Validation set:  accuracy = 70.790% - F1-score = 0.394821
+
+
+=== Experiment 121/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0752
+Train set: accuracy = 96.860% - F1-score = 0.941896
+Validation set:  accuracy = 71.075% - F1-score = 0.438831
+
+
+=== Experiment 122/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0091
+Train set: accuracy = 98.271% - F1-score = 0.966916
+Validation set:  accuracy = 71.551% - F1-score = 0.417623
+
+
+=== Experiment 123/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0544
+Train set: accuracy = 97.968% - F1-score = 0.981387
+Validation set:  accuracy = 71.646% - F1-score = 0.442307
+
+
+=== Experiment 124/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0616
+Train set: accuracy = 99.362% - F1-score = 0.991621
+Validation set:  accuracy = 72.788% - F1-score = 0.496567
+
+
+=== Experiment 125/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2458
+Train set: accuracy = 88.432% - F1-score = 0.754523
+Validation set:  accuracy = 72.788% - F1-score = 0.430740
+
+
+=== Experiment 126/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1027
+Train set: accuracy = 94.308% - F1-score = 0.864055
+Validation set:  accuracy = 70.885% - F1-score = 0.438524
+
+
+=== Experiment 127/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3575
+Train set: accuracy = 88.331% - F1-score = 0.816363
+Validation set:  accuracy = 74.405% - F1-score = 0.456241
+
+
+=== Experiment 128/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4686
+Train set: accuracy = 96.323% - F1-score = 0.950720
+Validation set:  accuracy = 72.027% - F1-score = 0.480997
+
+
+=== Experiment 129/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0479
+Train set: accuracy = 87.173% - F1-score = 0.734471
+Validation set:  accuracy = 73.644% - F1-score = 0.440726
+
+
+=== Experiment 130/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1914
+Train set: accuracy = 84.134% - F1-score = 0.657051
+Validation set:  accuracy = 74.976% - F1-score = 0.467213
+
+
+=== Experiment 131/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.5708
+Train set: accuracy = 85.561% - F1-score = 0.707922
+Validation set:  accuracy = 72.693% - F1-score = 0.452735
+
+
+=== Experiment 132/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1310
+Train set: accuracy = 85.745% - F1-score = 0.683531
+Validation set:  accuracy = 75.071% - F1-score = 0.535676
+
+
+=== Experiment 133/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.7305
+Train set: accuracy = 73.590% - F1-score = 0.398064
+Validation set:  accuracy = 70.314% - F1-score = 0.343178
+
+
+=== Experiment 134/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3390
+Train set: accuracy = 73.808% - F1-score = 0.347633
+Validation set:  accuracy = 72.407% - F1-score = 0.350053
+
+
+=== Experiment 135/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3121
+Train set: accuracy = 74.261% - F1-score = 0.410471
+Validation set:  accuracy = 71.646% - F1-score = 0.323923
+
+
+=== Experiment 136/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.6864
+Train set: accuracy = 74.731% - F1-score = 0.396451
+Validation set:  accuracy = 72.312% - F1-score = 0.318386
+
+
+=== Experiment 137/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.7056
+Train set: accuracy = 71.844% - F1-score = 0.296771
+Validation set:  accuracy = 70.885% - F1-score = 0.264414
+
+
+=== Experiment 138/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.2287
+Train set: accuracy = 72.767% - F1-score = 0.317733
+Validation set:  accuracy = 71.646% - F1-score = 0.255905
+
+
+=== Experiment 139/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.0210
+Train set: accuracy = 72.414% - F1-score = 0.348790
+Validation set:  accuracy = 73.739% - F1-score = 0.297557
+
+
+=== Experiment 140/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6820
+Train set: accuracy = 72.330% - F1-score = 0.315174
+Validation set:  accuracy = 70.980% - F1-score = 0.284893
+
+
+=== Experiment 141/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9957
+Train set: accuracy = 70.970% - F1-score = 0.254274
+Validation set:  accuracy = 70.029% - F1-score = 0.256660
+
+
+=== Experiment 142/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.5486
+Train set: accuracy = 70.853% - F1-score = 0.247682
+Validation set:  accuracy = 69.743% - F1-score = 0.229985
+
+
+=== Experiment 143/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.0293
+Train set: accuracy = 70.383% - F1-score = 0.238825
+Validation set:  accuracy = 69.267% - F1-score = 0.227171
+
+
+=== Experiment 144/288 ===
+Params: {'decay': 0.0001, 'dropout': 0.5, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.3976
+Train set: accuracy = 72.062% - F1-score = 0.293388
+Validation set:  accuracy = 68.601% - F1-score = 0.264737
+
+
+=== Experiment 145/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0635
+Train set: accuracy = 89.171% - F1-score = 0.802281
+Validation set:  accuracy = 66.984% - F1-score = 0.346181
+
+
+=== Experiment 146/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.1374
+Train set: accuracy = 82.841% - F1-score = 0.649858
+Validation set:  accuracy = 69.838% - F1-score = 0.403578
+
+
+=== Experiment 147/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0004
+Train set: accuracy = 91.219% - F1-score = 0.834940
+Validation set:  accuracy = 68.696% - F1-score = 0.365958
+
+
+=== Experiment 148/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3183
+Train set: accuracy = 81.078% - F1-score = 0.650807
+Validation set:  accuracy = 69.648% - F1-score = 0.377048
+
+
+=== Experiment 149/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2146
+Train set: accuracy = 92.445% - F1-score = 0.857724
+Validation set:  accuracy = 72.312% - F1-score = 0.418366
+
+
+=== Experiment 150/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3019
+Train set: accuracy = 88.331% - F1-score = 0.736792
+Validation set:  accuracy = 71.361% - F1-score = 0.415133
+
+
+=== Experiment 151/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0516
+Train set: accuracy = 92.965% - F1-score = 0.901230
+Validation set:  accuracy = 70.409% - F1-score = 0.382804
+
+
+=== Experiment 152/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.4622
+Train set: accuracy = 88.449% - F1-score = 0.783948
+Validation set:  accuracy = 69.648% - F1-score = 0.417073
+
+
+=== Experiment 153/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1214
+Train set: accuracy = 98.439% - F1-score = 0.971164
+Validation set:  accuracy = 67.460% - F1-score = 0.378229
+
+
+=== Experiment 154/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0032
+Train set: accuracy = 94.090% - F1-score = 0.898227
+Validation set:  accuracy = 72.502% - F1-score = 0.447280
+
+
+=== Experiment 155/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0079
+Train set: accuracy = 98.791% - F1-score = 0.978093
+Validation set:  accuracy = 71.170% - F1-score = 0.455746
+
+
+=== Experiment 156/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2346
+Train set: accuracy = 92.814% - F1-score = 0.897773
+Validation set:  accuracy = 67.745% - F1-score = 0.414862
+
+
+=== Experiment 157/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0257
+Train set: accuracy = 96.558% - F1-score = 0.919721
+Validation set:  accuracy = 73.739% - F1-score = 0.407506
+
+
+=== Experiment 158/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0470
+Train set: accuracy = 92.848% - F1-score = 0.871683
+Validation set:  accuracy = 73.168% - F1-score = 0.448504
+
+
+=== Experiment 159/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0628
+Train set: accuracy = 95.349% - F1-score = 0.923763
+Validation set:  accuracy = 72.027% - F1-score = 0.449220
+
+
+=== Experiment 160/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0510
+Train set: accuracy = 91.689% - F1-score = 0.846649
+Validation set:  accuracy = 75.167% - F1-score = 0.479808
+
+
+=== Experiment 161/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1745
+Train set: accuracy = 89.590% - F1-score = 0.775021
+Validation set:  accuracy = 71.170% - F1-score = 0.376837
+
+
+=== Experiment 162/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0446
+Train set: accuracy = 84.453% - F1-score = 0.681759
+Validation set:  accuracy = 75.547% - F1-score = 0.461977
+
+
+=== Experiment 163/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0237
+Train set: accuracy = 91.941% - F1-score = 0.838706
+Validation set:  accuracy = 74.025% - F1-score = 0.507776
+
+
+=== Experiment 164/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0000
+Train set: accuracy = 86.132% - F1-score = 0.702550
+Validation set:  accuracy = 73.549% - F1-score = 0.419016
+
+
+=== Experiment 165/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1204
+Train set: accuracy = 83.059% - F1-score = 0.612886
+Validation set:  accuracy = 73.073% - F1-score = 0.405685
+
+
+=== Experiment 166/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.3573
+Train set: accuracy = 80.037% - F1-score = 0.577643
+Validation set:  accuracy = 74.215% - F1-score = 0.467176
+
+
+=== Experiment 167/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1254
+Train set: accuracy = 83.915% - F1-score = 0.633374
+Validation set:  accuracy = 73.644% - F1-score = 0.426004
+
+
+=== Experiment 168/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2823
+Train set: accuracy = 81.917% - F1-score = 0.598856
+Validation set:  accuracy = 71.170% - F1-score = 0.457374
+
+
+=== Experiment 169/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.6336
+Train set: accuracy = 75.017% - F1-score = 0.403607
+Validation set:  accuracy = 69.553% - F1-score = 0.356157
+
+
+=== Experiment 170/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 2.1609
+Train set: accuracy = 73.657% - F1-score = 0.344206
+Validation set:  accuracy = 73.264% - F1-score = 0.338668
+
+
+=== Experiment 171/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2211
+Train set: accuracy = 73.858% - F1-score = 0.373766
+Validation set:  accuracy = 71.456% - F1-score = 0.339308
+
+
+=== Experiment 172/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.6147
+Train set: accuracy = 73.203% - F1-score = 0.326971
+Validation set:  accuracy = 72.312% - F1-score = 0.309150
+
+
+=== Experiment 173/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.8704
+Train set: accuracy = 72.515% - F1-score = 0.319417
+Validation set:  accuracy = 72.693% - F1-score = 0.299044
+
+
+=== Experiment 174/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2463
+Train set: accuracy = 72.633% - F1-score = 0.300472
+Validation set:  accuracy = 68.887% - F1-score = 0.249789
+
+
+=== Experiment 175/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.2230
+Train set: accuracy = 72.549% - F1-score = 0.310439
+Validation set:  accuracy = 70.695% - F1-score = 0.281401
+
+
+=== Experiment 176/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.7945
+Train set: accuracy = 73.858% - F1-score = 0.334678
+Validation set:  accuracy = 70.314% - F1-score = 0.276173
+
+
+=== Experiment 177/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.5865
+Train set: accuracy = 71.172% - F1-score = 0.253341
+Validation set:  accuracy = 69.077% - F1-score = 0.243343
+
+
+=== Experiment 178/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2480
+Train set: accuracy = 71.692% - F1-score = 0.270077
+Validation set:  accuracy = 70.314% - F1-score = 0.246320
+
+
+=== Experiment 179/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9614
+Train set: accuracy = 71.642% - F1-score = 0.275956
+Validation set:  accuracy = 69.363% - F1-score = 0.255322
+
+
+=== Experiment 180/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 3, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4625
+Train set: accuracy = 71.491% - F1-score = 0.259885
+Validation set:  accuracy = 67.555% - F1-score = 0.240349
+
+
+=== Experiment 181/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.5981
+Train set: accuracy = 72.246% - F1-score = 0.310643
+Validation set:  accuracy = 71.361% - F1-score = 0.276910
+
+
+=== Experiment 182/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.7703
+Train set: accuracy = 82.186% - F1-score = 0.624634
+Validation set:  accuracy = 70.124% - F1-score = 0.337408
+
+
+=== Experiment 183/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.3129
+Train set: accuracy = 72.095% - F1-score = 0.334820
+Validation set:  accuracy = 69.077% - F1-score = 0.315877
+
+
+=== Experiment 184/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4727
+Train set: accuracy = 73.892% - F1-score = 0.311552
+Validation set:  accuracy = 65.937% - F1-score = 0.178278
+
+
+=== Experiment 185/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.5847
+Train set: accuracy = 76.478% - F1-score = 0.501978
+Validation set:  accuracy = 68.126% - F1-score = 0.286641
+
+
+=== Experiment 186/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1381
+Train set: accuracy = 85.527% - F1-score = 0.713412
+Validation set:  accuracy = 69.743% - F1-score = 0.352160
+
+
+=== Experiment 187/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.7868
+Train set: accuracy = 76.394% - F1-score = 0.421536
+Validation set:  accuracy = 68.030% - F1-score = 0.302208
+
+
+=== Experiment 188/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3174
+Train set: accuracy = 87.072% - F1-score = 0.765160
+Validation set:  accuracy = 68.316% - F1-score = 0.326200
+
+
+=== Experiment 189/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.8955
+Train set: accuracy = 78.845% - F1-score = 0.570880
+Validation set:  accuracy = 67.555% - F1-score = 0.369518
+
+
+=== Experiment 190/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.7029
+Train set: accuracy = 86.602% - F1-score = 0.760591
+Validation set:  accuracy = 68.506% - F1-score = 0.371758
+
+
+=== Experiment 191/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.1132
+Train set: accuracy = 87.257% - F1-score = 0.775579
+Validation set:  accuracy = 69.838% - F1-score = 0.372391
+
+
+=== Experiment 192/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2136
+Train set: accuracy = 91.152% - F1-score = 0.871683
+Validation set:  accuracy = 70.980% - F1-score = 0.401754
+
+
+=== Experiment 193/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0020
+Train set: accuracy = 97.565% - F1-score = 0.970439
+Validation set:  accuracy = 70.124% - F1-score = 0.411863
+
+
+=== Experiment 194/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0811
+Train set: accuracy = 98.925% - F1-score = 0.990393
+Validation set:  accuracy = 72.502% - F1-score = 0.455770
+
+
+=== Experiment 195/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0343
+Train set: accuracy = 96.659% - F1-score = 0.942750
+Validation set:  accuracy = 72.883% - F1-score = 0.461092
+
+
+=== Experiment 196/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0013
+Train set: accuracy = 98.153% - F1-score = 0.967453
+Validation set:  accuracy = 74.120% - F1-score = 0.427284
+
+
+=== Experiment 197/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.1800
+Train set: accuracy = 94.342% - F1-score = 0.900647
+Validation set:  accuracy = 71.931% - F1-score = 0.424266
+
+
+=== Experiment 198/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0221
+Train set: accuracy = 92.579% - F1-score = 0.870861
+Validation set:  accuracy = 73.264% - F1-score = 0.455716
+
+
+=== Experiment 199/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0640
+Train set: accuracy = 92.377% - F1-score = 0.860308
+Validation set:  accuracy = 72.788% - F1-score = 0.453454
+
+
+=== Experiment 200/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0824
+Train set: accuracy = 93.687% - F1-score = 0.909328
+Validation set:  accuracy = 72.693% - F1-score = 0.409473
+
+
+=== Experiment 201/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.2772
+Train set: accuracy = 85.410% - F1-score = 0.703334
+Validation set:  accuracy = 74.596% - F1-score = 0.451811
+
+
+=== Experiment 202/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0958
+Train set: accuracy = 86.921% - F1-score = 0.753458
+Validation set:  accuracy = 73.834% - F1-score = 0.423342
+
+
+=== Experiment 203/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0761
+Train set: accuracy = 83.428% - F1-score = 0.644568
+Validation set:  accuracy = 73.834% - F1-score = 0.431294
+
+
+=== Experiment 204/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.4989
+Train set: accuracy = 85.930% - F1-score = 0.707492
+Validation set:  accuracy = 75.737% - F1-score = 0.467090
+
+
+=== Experiment 205/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.2444
+Train set: accuracy = 74.077% - F1-score = 0.369119
+Validation set:  accuracy = 72.312% - F1-score = 0.307995
+
+
+=== Experiment 206/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.0439
+Train set: accuracy = 74.698% - F1-score = 0.347829
+Validation set:  accuracy = 72.027% - F1-score = 0.334107
+
+
+=== Experiment 207/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 1.5221
+Train set: accuracy = 73.623% - F1-score = 0.346637
+Validation set:  accuracy = 71.456% - F1-score = 0.318391
+
+
+=== Experiment 208/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.6868
+Train set: accuracy = 74.748% - F1-score = 0.403391
+Validation set:  accuracy = 73.264% - F1-score = 0.374287
+
+
+=== Experiment 209/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.4538
+Train set: accuracy = 71.608% - F1-score = 0.260996
+Validation set:  accuracy = 67.555% - F1-score = 0.229904
+
+
+=== Experiment 210/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6678
+Train set: accuracy = 72.683% - F1-score = 0.318130
+Validation set:  accuracy = 72.122% - F1-score = 0.322458
+
+
+=== Experiment 211/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3646
+Train set: accuracy = 72.011% - F1-score = 0.294631
+Validation set:  accuracy = 70.124% - F1-score = 0.267439
+
+
+=== Experiment 212/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.6255
+Train set: accuracy = 73.707% - F1-score = 0.387227
+Validation set:  accuracy = 70.599% - F1-score = 0.321296
+
+
+=== Experiment 213/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.1347
+Train set: accuracy = 71.138% - F1-score = 0.263224
+Validation set:  accuracy = 70.124% - F1-score = 0.228978
+
+
+=== Experiment 214/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9610
+Train set: accuracy = 71.155% - F1-score = 0.252931
+Validation set:  accuracy = 68.601% - F1-score = 0.237244
+
+
+=== Experiment 215/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.8398
+Train set: accuracy = 72.163% - F1-score = 0.286511
+Validation set:  accuracy = 69.743% - F1-score = 0.257336
+
+
+=== Experiment 216/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.2, 'kernel': 5, 'lr': 0.0001, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.6115
+Train set: accuracy = 71.457% - F1-score = 0.283069
+Validation set:  accuracy = 70.790% - F1-score = 0.268246
+
+
+=== Experiment 217/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0036
+Train set: accuracy = 88.801% - F1-score = 0.826994
+Validation set:  accuracy = 67.364% - F1-score = 0.358194
+
+
+=== Experiment 218/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.7869
+Train set: accuracy = 88.650% - F1-score = 0.783371
+Validation set:  accuracy = 69.458% - F1-score = 0.330234
+
+
+=== Experiment 219/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4596
+Train set: accuracy = 85.863% - F1-score = 0.768544
+Validation set:  accuracy = 71.075% - F1-score = 0.310395
+
+
+=== Experiment 220/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.4382
+Train set: accuracy = 79.970% - F1-score = 0.587567
+Validation set:  accuracy = 70.790% - F1-score = 0.385632
+
+
+=== Experiment 221/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0160
+Train set: accuracy = 94.325% - F1-score = 0.882657
+Validation set:  accuracy = 69.648% - F1-score = 0.383518
+
+
+=== Experiment 222/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.3153
+Train set: accuracy = 93.150% - F1-score = 0.862883
+Validation set:  accuracy = 70.504% - F1-score = 0.388101
+
+
+=== Experiment 223/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 1.3244
+Train set: accuracy = 93.032% - F1-score = 0.871105
+Validation set:  accuracy = 70.409% - F1-score = 0.385716
+
+
+=== Experiment 224/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.0119
+Train set: accuracy = 91.672% - F1-score = 0.825712
+Validation set:  accuracy = 70.409% - F1-score = 0.349070
+
+
+=== Experiment 225/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.3875
+Train set: accuracy = 97.952% - F1-score = 0.961557
+Validation set:  accuracy = 70.124% - F1-score = 0.425894
+
+
+=== Experiment 226/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.9259
+Train set: accuracy = 95.148% - F1-score = 0.935041
+Validation set:  accuracy = 70.409% - F1-score = 0.419190
+
+
+=== Experiment 227/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 0.0069
+Train set: accuracy = 97.398% - F1-score = 0.952379
+Validation set:  accuracy = 71.836% - F1-score = 0.408372
+
+
+=== Experiment 228/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.01, 'max_iters': 30, 'nn_batch_size': 64, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 94/94 - Loss: 1.4551
+Train set: accuracy = 96.054% - F1-score = 0.926132
+Validation set:  accuracy = 70.314% - F1-score = 0.406917
+
+
+=== Experiment 229/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.6722
+Train set: accuracy = 93.049% - F1-score = 0.891098
+Validation set:  accuracy = 71.646% - F1-score = 0.445112
+
+
+=== Experiment 230/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.5431
+Train set: accuracy = 88.684% - F1-score = 0.767633
+Validation set:  accuracy = 73.264% - F1-score = 0.505305
+
+
+=== Experiment 231/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0247
+Train set: accuracy = 94.997% - F1-score = 0.923824
+Validation set:  accuracy = 71.646% - F1-score = 0.454840
+
+
+=== Experiment 232/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 16, 'nn_type': 'cnn', 'optim': 'adamw', 'padding': 2, 'test': False}
+[Epoch 30/30] Batch 373/373 - Loss: 0.0326
+Train set: accuracy = 91.907% - F1-score = 0.850253
+Validation set:  accuracy = 74.786% - F1-score = 0.461053
+
+
+=== Experiment 233/288 ===
+Params: {'decay': 1e-05, 'dropout': 0.5, 'kernel': 3, 'lr': 0.001, 'max_iters': 30, 'nn_batch_size': 32, 'nn_type': 'cnn', 'optim': 'adam', 'padding': 1, 'test': False}
+[Epoch 30/30] Batch 187/187 - Loss: 0.2282
+Train set: accuracy = 96.189% - F1-score = 0.922712
+Validation set:  accuracy = 70.124% - F1-score = 0.429319

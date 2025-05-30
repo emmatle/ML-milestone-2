@@ -4,7 +4,7 @@ import numpy as np
 from torchinfo import summary
 
 from src.data import load_data
-from src.methods.deep_network import MLP, CNN, Trainer
+from src.methods.deep_network import MLP, CNN, Trainer, ResNet18
 from src.methods.dummy_methods import DummyClassifier
 from src.utils import normalize_fn, append_bias_term, accuracy_fn, macrof1_fn, get_n_classes
 import matplotlib as plt
@@ -103,7 +103,11 @@ def main(args):
         xtrain = xtrain.transpose(0,3,1,2)
         xtest = xtest.transpose(0,3,1,2)
         input_channels = xtrain.shape[1]
-        model = CNN(input_channels, n_classes, kernel_size=args.kernel, padding=args.padding)
+
+        if args.resnet == "true":
+            model = ResNet18(n_classes)
+        else:
+            model = CNN(input_channels, n_classes, kernel_size=args.kernel, padding=args.padding)
         summary(model)
         model = model.to(device)
         method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, optimizer=args.optim ,weight_decay=args.decay)
@@ -147,6 +151,7 @@ if __name__ == '__main__':
     parser.add_argument('--kernel', type=int, default=3, help="kernel size")
     parser.add_argument('--padding', type=int, default=1, help="padding size")
     parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
+    parser.add_argument('--resnet', type=bool, default=False, help="Use the Resnet18 model to classify")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")
 
