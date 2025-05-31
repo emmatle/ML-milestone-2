@@ -67,7 +67,7 @@ Validation set:  accuracy = 68.030% - F1-score = 0.125328
         return self.model(x)
 
 class CNN(nn.Module):
-    """ CNN expects inputs of shape (N, 3, 28, 28). """
+    """ CNN expects inputs of shape (N, Ch, H, W). """
 
     def __init__(self, input_channels, n_classes, kernel_size=3, padding=1):
         """
@@ -77,54 +77,56 @@ class CNN(nn.Module):
             __init__(self, input_channels, n_classes, my_arg=32)
 
         Arguments:
-            input_channels (int): number of channels in the input
-            n_classes (int): number of classes to predict
+            input_channels (int): number of channels in the input (3 for RGB images)
+            n_classes (int): number of classes to predict (7 for DermaMNIST)
+            kernel_size (int) : Size of the Kernel for convolution layers (default value = 3)
+            padding (int) : help preserving spatial dimensions 28x28 (default value = 1)
         """
+
+        #We first call the constructor nn.Module to set up the PyTorch library functionalities 
         super(CNN, self).__init__()
 
-        # First convolutional layer: 3 input channels -> 6 output channels
+        # We define the first convolutional layer: 3 input channels -> 6 output channels using as we said a Kernel and padding 
         self.conv2d1 = nn.Conv2d(in_channels=input_channels, out_channels=6, kernel_size=kernel_size, padding=padding)
         
-        # Second convolutional layer: 6 -> 16 channels
+        # Then the second convolutional layer: 6 channels from the previous layer -> 16 output channels still using the same kernel and padding 
         self.conv2d2 = nn.Conv2d(in_channels=6, out_channels=16, kernel_size=kernel_size, padding=padding)
         
-        # After conv/pooling we flatten for fully-connected layers
-        # From the output size after pooling: 28 → 14 → 7, channels: 16
-        # So final feature map size: 16 × 7 × 7 = 784
-        self.fc1 = nn.Linear(16 * 7 * 7, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 32)
-        self.fc4 = nn.Linear(32, n_classes)
+        # We defined now the Fully connected layers
+        # Knowing that the FC layers need a 1D input we flatten the 3D vectors produced after convolutions and pooling 
+        # 16 features map each of size 7x7 that will be compressed and transformed by the FC layers 
+        self.fc1 = nn.Linear(16 * 7 * 7, 120) #first FC layer (flatten input : 16 × 7 × 7 = 784, output : 120)
+        self.fc2 = nn.Linear(120, 84)         #second FC layer (input : 120, output : 84)
+        self.fc3 = nn.Linear(84, 32)          #third FC layer (input : 84, output : 32)
+        self.fc4 = nn.Linear(32, n_classes)   #last FC layers (input : 32, output layer : 7 (one value par class on logits form)
 
     def forward(self, x):
         """
         Predict the class of a batch of samples with the model.
 
         Arguments:
-            x (tensor): input batch of shape (N, Ch, H, W)
+            x (tensor): input batch of shape (N, Ch, H, W) (here (N, 3, 28, 28))
         Returns:
             preds (tensor): logits of predictions of shape (N, C)
                 Reminder: logits are value pre-softmax.
         """
-        # Apply first convolution + ReLU + Max Pooling
+        # We apply the first convolution layer, ReLU and then Max Pooling with kernel size 2x2
         x = F.max_pool2d(F.relu(self.conv2d1(x)), kernel_size=2)
 
-        # Apply second convolution + ReLU + Max Pooling
-        #x = F.max_pool2d(F.relu(self.conv2d2(x)), kernel_size=2)
-        #use adaptative pooling to erase the dimension problem 
+        # Then we apply the second convolution layer, ReLU and Adaptive Pooling 
+        #This is to ensure our output has spatial dimension fixed at 7x7
         x = F.adaptive_max_pool2d(F.relu(self.conv2d2(x)), output_size=(7, 7))
 
-        # Flatten for FC layers
+        # As we said before we flatten for FC layers that expect 1D input 
         x = torch.flatten(x, 1)  # or x.view(x.size(0), -1)
 
-        # Fully connected layers with ReLU
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = F.relu(self.fc3(x))
-
-        # Final output layer (no softmax, returns logits)
+        # Then we apply Fully connected layers with ReLU activations to help the model learn faster and deeper.
+        x = F.relu(self.fc1(x)) #first FC layer
+        x = F.relu(self.fc2(x)) #second FC layer
+        x = F.relu(self.fc3(x)) #third FC layer 
+        # This will be the final output layer (no softmax here)
         x = self.fc4(x)
-        return x
+        return x  #(returns logits)
 
 class ResNet18(nn.Module):
     def __init__(self, num_classes=7):
