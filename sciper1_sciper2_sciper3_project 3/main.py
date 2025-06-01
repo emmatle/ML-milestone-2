@@ -104,13 +104,21 @@ def main(args):
         xtest = xtest.transpose(0,3,1,2)
         input_channels = xtrain.shape[1]
 
+        # Inputting CNN with the correct model
         if args.resnet:
             model = ResNet18(n_classes)
+        elif args.cnn_default:
+            model = CNN(input_channels, n_classes, kernel_size=5, padding=2)
         else:
             model = CNN(input_channels, n_classes, kernel_size=args.kernel, padding=args.padding)
+
         summary(model)
         model = model.to(device)
-        method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, optimizer=args.optim ,weight_decay=args.decay)
+        # Use Trainer with the default parameters or not
+        if args.cnn_default: 
+            method_obj = Trainer(model, lr=1e-3, epochs=30, batch_size=64, optimizer="adamw" ,weight_decay=1e-4)
+        else:
+            method_obj = Trainer(model, lr=args.lr, epochs=args.max_iters, batch_size=args.nn_batch_size, optimizer=args.optim ,weight_decay=args.decay)
         preds_train = method_obj.fit(xtrain, ytrain)
         preds = method_obj.predict(xtest)
 
@@ -144,16 +152,18 @@ if __name__ == '__main__':
                         help="Device to use for the training, it can be 'cpu' | 'cuda' | 'mps'")
 
     parser.add_argument('--hidden_layers', type=int, nargs='+', default=[256,128])
-    parser.add_argument('--lr', type=float, default=1e-3, help="learning rate for methods with learning rate")
+    parser.add_argument('--lr', type=float, default=1e-2, help="learning rate for methods with learning rate")
     parser.add_argument('--optim', type=str, default="adamw", help="Optimizer to use for training, can be 'sgd', 'adam', 'adamw'" )
     parser.add_argument('--dropout', type=float, default=0.2, help="dropout p")
-    parser.add_argument('--decay', type=float, default=1e-4, help="weight decay for adam")
+    parser.add_argument('--decay', type=float, default=1e-5, help="weight decay for adam")
     parser.add_argument('--kernel', type=int, default=5, help="kernel size")
     parser.add_argument('--padding', type=int, default=2, help="padding size")
-    parser.add_argument('--max_iters', type=int, default=100, help="max iters for methods which are iterative")
+    parser.add_argument('--max_iters', type=int, default=30, help="max iters for methods which are iterative")
     parser.add_argument('--resnet', action="store_true", help="Use the Resnet18 model to classify")
     parser.add_argument('--test', action="store_true",
                         help="train on whole training data and evaluate on the test data, otherwise use a validation set")
+    parser.add_argument('--cnn_default', action="store_true",
+                        help="use the default parameters for cnn")
 
 
     # "args" will keep in memory the arguments and their values,
